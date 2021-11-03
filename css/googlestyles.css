@@ -57,8 +57,8 @@ body{
     align-items: center;
     display:flex;
 }
-div{
-    display: block;
+.leftcomponents{
+    display: inline-block;
 }
 .gandm{
     display:block;
@@ -97,15 +97,10 @@ a .glink{
 }
 .rightcomponents
 {
-    float:right;
+    display: inline-block;
+    /* float:right; */
     position:relative;
     
-}
-.appbutt{
-    padding-left: 4px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 10px;
 }
 .app{
     position: relative;
@@ -189,7 +184,7 @@ form .search{
 .box{
     flex:1;
     display: flex;
-    width: 500;
+    max-width: 500;
     justify-content: center;
     padding: 5px 8px 0 16px;
     padding-left: 14px;
@@ -237,8 +232,8 @@ input{
     word-wrap: break-word;
     outline: none;
     display: flex;
+    width:100%;
     flex: 100%;
-    -webkit-tap-highlight-color: transparent;
     margin-bottom: 10px;
     height: 34px;
     font-size: 16px;
@@ -246,6 +241,7 @@ input{
 .microphone{
     display: flex;
     flex: 0 0 auto;
+    position:relative;
     margin-top: -5px;
     align-items: center;
     border: 0;
@@ -256,9 +252,9 @@ input{
 .phone{
     flex: 1 0 auto;
     display: flex;
-    cursor: pointer;
     align-items: center;
     border: 0;
+    position:relative;
     background: transparent;
     outline: none;
     padding: 0 8px;
@@ -370,7 +366,7 @@ footer
     color: rgba(54, 54, 54, 0.54);
     flex-wrap: wrap;
     border-top: 1px solid #ddd;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 0 20px;
     font-family: inherit;
     text-decoration: none;
@@ -378,8 +374,8 @@ footer
 .firstlinks
 {
     display:flex;
-    padding-left: 15px;
     min-width: 30%;
+    flex-wrap: wrap;
     justify-content:flex-start;
     font-size: 14px;
     order:1;
@@ -388,7 +384,7 @@ footer
 }
 .firstlinks a
 {
-    display: block;
+    display: flex;
     text-decoration: none;
     font-size: 14px;
     padding:12px;
@@ -405,10 +401,9 @@ footer
 {
     display: flex;
     justify-content:flex-end;
-    padding-right: 19px;
     min-width: 30%;
     font-size: 14px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     order:3;
     color: rgba(54, 54, 54, 0.54);
     color:#222;
@@ -422,18 +417,21 @@ footer
     font-size: 14px;
     color: #5f6368;
     margin-right: 25px;
-
 }
-
 .carbon
 {
     color: rgba(54, 54, 54, 0.54);
     font-size: 14px;
-    font-family: inherit;
+    font-family: arial,sans-serif;
     order:2;
     display:flex;
-    /* width:100%; */
-    justify-content: center;
+    justify-content: space-between;
+}
+.carbona{
+    color:#70757a;
+    display: block;
+    padding: 15px;
+    white-space: nowrap;
     text-decoration: none;
 }
 .carbon a:hover{
@@ -443,4 +441,45 @@ footer
     height:14px;
     margin-right:6px;
     color:#70757a;
+}
+@media (max-width: 780px){
+    .largecontainer{
+        max-width:780px;
+    }
+    .section1{
+        width:100%;
+    }
+    .section2{
+        padding-bottom: 30px;
+    }
+    .components{
+        display: flex;
+        justify-content: space-between;
+    }
+    .SearchBox{
+        max-width:100%;
+    }
+    .Footerlinks{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+    }
+    .how{
+        display: none;
+    }
+    .carbon{
+        order: 1;
+        justify-content: center;
+
+    }
+    .firstlinks{
+        order:2;
+        justify-content: center;
+    }
+    .secondlinks{
+        order:3;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        }
 }
