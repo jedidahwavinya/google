@@ -16,6 +16,11 @@ body{
     min-width: 400px;
     background-color:#fff;
 }
+@media (max-width:1100px) {
+    body{
+        max-width: 1000px;
+    }
+}
 .largecontainer
 {
     display: flex;
@@ -360,6 +365,12 @@ footer
     font-weight: 400;
     font-size: 15px;
     color: rgba(54, 54, 54, 0.54);
+}
+@media only screen and (max-width:1200px) {
+    .Footerlinks{
+        justify-content: space-evenly;
+    }
+    
 }
 .Footerlinks{
     display:flex;
